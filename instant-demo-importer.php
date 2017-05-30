@@ -405,7 +405,7 @@ if(!class_exists('Instant_Demo_Importer')) :
 				$menu_arr = explode('|', $menu);
 
 				foreach($menu_arr as $menu_single_ar) {
-					$mens = explode('>', $menu_single_ar);
+					$mens = explode('&#62;', $menu_single_ar);
 
 					$rows = $wpdb->get_results("SELECT * FROM $table_db_name where name='".$mens[0]."'",ARRAY_A);
 
